@@ -31,8 +31,15 @@ export default function BidirectionalLinkWrapper({ children }) {
       {children}
       {pageBacklinks && (
         <>
+          <hr />
           <h1>Backlinks</h1>
-          <Backlinks backlinks={pageBacklinks.map((b) => excerpts[b])} />
+          <Backlinks
+            backlinks={pageBacklinks.map((b) => ({
+              "slug": b,
+              "title": excerpts[b]?.title,
+              "excerpt": excerpts[b]?.excerpt,
+            }))}
+          />
         </>
       )}
 

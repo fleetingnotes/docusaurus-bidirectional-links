@@ -1,5 +1,6 @@
 import React from "react";
 import LinkPreview from "@site/src/components/LinkPreview/index";
+import Link from "@docusaurus/Link";
 
 function Backlinks({ backlinks }) {
   // The backlinks prop will be the imported backlinks data
@@ -8,21 +9,30 @@ function Backlinks({ backlinks }) {
     // Render your document page here, using the backlinks data
     <>
       {backlinks.map((
-        { title, excerpt }: { title: string; excerpt: string },
+        { title, excerpt, slug }: {
+          slug: string;
+          title: string;
+          excerpt: string;
+        },
         i: number,
       ) => (
         <div key={i} style={{ marginBottom: "1em" }}>
-          <LinkPreview
-            title={title}
-            excerpt={excerpt}
-            style={{
-              border: "1px solid #ddd",
-              padding: "1em",
-              borderRadius: "5px",
-              maxHeight: "150px",
-              overflowY: "hidden",
-            }}
-          />
+          <Link
+            to={slug}
+            style={{ textDecoration: "inherit", color: "inherit" }}
+          >
+            <LinkPreview
+              title={title}
+              excerpt={excerpt}
+              style={{
+                border: "1px solid #ddd",
+                padding: "1em",
+                borderRadius: "5px",
+                maxHeight: "150px",
+                overflowY: "hidden",
+              }}
+            />
+          </Link>
         </div>
       ))}
     </>
