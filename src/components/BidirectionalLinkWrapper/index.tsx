@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { usePluginData } from "@docusaurus/useGlobalData";
 import Backlinks from "@site/src/components/Backlinks/index";
 import { useLocation } from "@docusaurus/router";
@@ -13,9 +13,21 @@ export default function BidirectionalLinkWrapper({ children }) {
 
   const pageBacklinks = backlinks[location.pathname];
   const pageLinks = links[location.pathname];
+  const ref = useRef(null);
+
+  // set anchor tags to have tooltip id
+  useEffect(() => {
+    if (ref.current) {
+      const links = ref.current.getElementsByTagName("a");
+      for (let link of links) {
+        const href = link.getAttribute("href");
+        link.setAttribute("data-tooltip-id", href);
+      }
+    }
+  }, []);
 
   return (
-    <>
+    <div ref={ref}>
       {children}
       {pageBacklinks && (
         <>
@@ -26,10 +38,9 @@ export default function BidirectionalLinkWrapper({ children }) {
 
       {pageLinks && pageLinks.map((p, i) => {
         const previewObj = excerpts[p];
-        const basename = p.split(/[\\/]/).pop();
         if (!previewObj) return null;
         return (
-          <Tooltip id={basename} key={i}>
+          <Tooltip id={p} key={i}>
             <LinkPreview
               title={previewObj.title}
               excerpt={previewObj.excerpt}
@@ -42,6 +53,6 @@ export default function BidirectionalLinkWrapper({ children }) {
           </Tooltip>
         );
       })}
-    </>
+    </div>
   );
 }
