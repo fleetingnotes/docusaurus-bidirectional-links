@@ -11,9 +11,9 @@ module.exports = function remarkTooltip() {
       if (!node.data.hProperties) {
         node.data.hProperties = {};
       }
-      if (url.startsWith("/") || url.startsWith(".")) {
-        // TODO: set tooltip id as entire path
-        // bc if two files in different folders with the same name will conflict
+      // TODO: set tooltip id as entire path
+      // bc if two files in different folders with the same name will conflict
+      if (!url.match(/^https*:\/\//)) {
         node.data.hProperties["data-tooltip-id"] = path.basename(url);
       }
     });

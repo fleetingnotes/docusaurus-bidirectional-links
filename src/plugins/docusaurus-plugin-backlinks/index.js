@@ -86,7 +86,7 @@ async function generateLinks() {
       let target = link.match(/\(([^\)]+)\)/)[1];
 
       // ensures relative path
-      if (target.startsWith(".")) {
+      if (!target.match(/^https*:\/\//)) {
         target = "/" + path
           .join(path.dirname(file), target);
         if (!backlinks[target]) {
