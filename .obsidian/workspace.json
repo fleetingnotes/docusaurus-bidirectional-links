@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/tutorial-basics/create-a-page.md",
+                "file": "docs/tutorial-basics/congratulations.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/tutorial-basics/create-a-page.md",
+                "file": "docs/tutorial-basics/congratulations.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/tutorial-basics/create-a-page.md",
+                "file": "docs/tutorial-basics/congratulations.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/tutorial-basics/create-a-page.md"
+                "file": "docs/tutorial-basics/congratulations.md"
               }
             }
           }
@@ -148,6 +148,11 @@
   },
   "active": "1a6f2134cc5d1ed6",
   "lastOpenFiles": [
+    "docs/tutorial-basics/create-a-page.md",
+    "src/plugins/remarkTooltip.js",
+    "src/plugins/index.js",
+    "src/plugins/remark-tooltip/index.js",
+    "src/plugins/remark-tooltip",
     "src/components/LinkPreview/index.tsx",
     "src/components/LinkPreview/index.js",
     "node_modules/micromark/stream.d.ts",
@@ -155,11 +160,6 @@
     "node_modules/micromark/readme.md",
     "node_modules/micromark/package.json",
     "node_modules/micromark/stream.js",
-    "node_modules/micromark/index.js",
-    "node_modules/micromark-core-commonmark/index.d.ts",
-    "node_modules/micromark-util-decode-string/index.d.ts",
-    "node_modules/micromark-util-decode-numeric-character-reference/index.d.ts",
-    "node_modules/hast-util-whitespace/index.d.ts",
     "node_modules/hast-util-whitespace/readme.md",
     "node_modules/micromark-util-decode-string/readme.md",
     "node_modules/micromark-util-decode-numeric-character-reference/readme.md",

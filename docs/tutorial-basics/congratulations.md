@@ -8,6 +8,8 @@ You have just learned the **basics of Docusaurus** and made some changes to the 
 
 [create a blog post](./create-a-blog-post)
 [create a document](./create-a-document)
+[create a document](./create-a-document)
+[create a document](./create-a-document)
 
 Docusaurus has **much more to offer**!
 

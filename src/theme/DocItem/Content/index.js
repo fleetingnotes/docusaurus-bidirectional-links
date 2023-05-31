@@ -3,11 +3,15 @@ import Content from '@theme-original/DocItem/Content';
 import { usePluginData } from '@docusaurus/useGlobalData';
 import Backlinks from '@site/src/components/Backlinks/index';
 import { useLocation } from '@docusaurus/router';
+import { Tooltip } from 'react-tooltip';
+import { ReactMarkdown } from 'react-markdown/lib/react-markdown';
 
 export default function ContentWrapper(props) {
   const location = useLocation();
-  const { backlinks, excerpts } = usePluginData('docusaurus-plugin-backlinks');
+  const { backlinks, excerpts, links } = usePluginData('docusaurus-plugin-backlinks');
+
   const pageBacklinks = backlinks[location.pathname];
+  const pageLinks = links[location.pathname];
 
   return (
     <>
@@ -18,6 +22,21 @@ export default function ContentWrapper(props) {
           <Backlinks backlinks={pageBacklinks.map(b => excerpts[b])} />
         </>
       )}
+
+      {pageLinks.map(p => {
+        const previewObj = excerpts[p];
+        const basename = p.split(/[\\/]/).pop();
+        if (!previewObj) return null;
+        return (
+          <Tooltip id={basename}>
+            <div>
+              <h1>{previewObj.title}</h1>
+              <ReactMarkdown>{previewObj.excerpt}</ReactMarkdown>
+            </div>
+          </Tooltip>
+        )
+      })}
+
     </>
   );
 }
