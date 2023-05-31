@@ -1,5 +1,5 @@
 import React from "react";
-import LinkPreview from "../LinkPreview/index";
+import LinkPreview from "@site/src/components/LinkPreview/index";
 
 function Backlinks({ backlinks }) {
   // The backlinks prop will be the imported backlinks data
@@ -7,12 +7,21 @@ function Backlinks({ backlinks }) {
   return (
     // Render your document page here, using the backlinks data
     <>
-      {backlinks.map(({ title, excerpt }, i) => (
+      {backlinks.map((
+        { title, excerpt }: { title: string; excerpt: string },
+        i: number,
+      ) => (
         <div key={i} style={{ marginBottom: "1em" }}>
           <LinkPreview
             title={title}
             excerpt={excerpt}
-            maxHeight={125}
+            style={{
+              border: "1px solid #ddd",
+              padding: "1em",
+              borderRadius: "5px",
+              maxHeight: "150px",
+              overflowY: "hidden",
+            }}
           />
         </div>
       ))}

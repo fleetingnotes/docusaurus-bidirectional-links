@@ -28,6 +28,9 @@ module.exports = function (context, options) {
       return { links, backlinks, excerpts };
     },
     async contentLoaded({ content, actions }) {
+      // TODO: instead of setting global data, create a different static asset for each page
+      // then it will be dynamically accessed https://docusaurus.io/docs/static-assets
+      // current method is bad because content can get really big! and every page needs to load it
       const { setGlobalData } = actions;
       setGlobalData(content);
     },
@@ -43,7 +46,7 @@ async function generateExcerpts(rootDir) {
   for (const file of files) {
     const fileContent = await fs.readFile(file, "utf8");
     const { content, data } = matter(fileContent);
-    const slug = `/${file.replace(/\.md$/, "")}`;
+    const slug = await getSlugFromFile(file);
     excerpts[slug] = {
       "title": data?.title,
       "excerpt": content.slice(0, 500),
@@ -51,6 +54,21 @@ async function generateExcerpts(rootDir) {
   }
 
   return excerpts;
+}
+
+async function getSlugFromFile(file) {
+  const fileContent = await fs.readFile(file, "utf8");
+  const { data } = matter(fileContent);
+  const slug = data?.["slug"];
+  if (slug) {
+    const filename = path.basename(file, path.extname(file));
+    let dir = path.dirname(file);
+    if (filename == "index") {
+      dir = path.dirname(dir);
+    }
+    return path.join(`/${dir}`, slug);
+  }
+  return `/${file.replace(/\.md$/, "")}`;
 }
 
 async function generateLinks() {
@@ -61,7 +79,7 @@ async function generateLinks() {
   for (const file of files) {
     const content = await fs.promises.readFile(file, "utf-8");
     const links = content.match(/\[([^\]]+)\]\(([^\)]+)\)/g) || [];
-    const slug = `/${file.replace(/\.md$/, "")}`;
+    const slug = await getSlugFromFile(file);
 
     outlinks[slug] = new Set();
     for (const link of links) {
@@ -69,7 +87,8 @@ async function generateLinks() {
 
       // ensures relative path
       if (target.startsWith(".")) {
-        target = `/${path.join(path.dirname(file), target)}`; // convert target so its relative to root dir
+        target = "/" + path
+          .join(path.dirname(file), target);
         if (!backlinks[target]) {
           backlinks[target] = new Set();
         }

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/tutorial-basics/congratulations.md",
+                "file": "blog/2019-05-28-first-blog-post.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/tutorial-basics/congratulations.md",
+                "file": "blog/2019-05-28-first-blog-post.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/tutorial-basics/congratulations.md",
+                "file": "blog/2019-05-28-first-blog-post.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/tutorial-basics/congratulations.md"
+                "file": "blog/2019-05-28-first-blog-post.md"
               }
             }
           }
@@ -148,18 +148,27 @@
   },
   "active": "1a6f2134cc5d1ed6",
   "lastOpenFiles": [
+    "blog/2019-05-29-long-blog-post.md",
+    "blog/2019-05-28-first-blog-post.md",
+    "blog/2021-08-26-welcome/index.md",
+    "docs/tutorial-extras/manage-docs-versions.md",
+    "docs/tutorial-extras/translate-your-site.md",
+    "docs/tutorial-basics/congratulations.md",
+    "docs/tutorial-basics/create-a-blog-post.md",
+    "docs/tutorial-basics/create-a-document.md",
     "docs/tutorial-basics/create-a-page.md",
+    "docs/tutorial-basics/deploy-your-site.md",
+    "src/theme/BlogPostItem/Content/index.js",
+    "src/theme/BlogPostItem/Content",
+    "src/components/BidirectionalLinkWrapper/index.tsx",
+    "src/components/BidirectionalLinkWrapper",
+    "src/theme/BlogPostItem/index.js",
+    "src/theme/BlogPostItem",
+    "src/theme/DocItem/index.js",
+    "src/theme/DocItem/Content/index.js",
+    "src/theme/DocItem/Content/index.tsx",
     "src/plugins/remarkTooltip.js",
-    "src/plugins/index.js",
-    "src/plugins/remark-tooltip/index.js",
-    "src/plugins/remark-tooltip",
-    "src/components/LinkPreview/index.tsx",
-    "src/components/LinkPreview/index.js",
-    "node_modules/micromark/stream.d.ts",
-    "node_modules/micromark/index.d.ts",
     "node_modules/micromark/readme.md",
-    "node_modules/micromark/package.json",
-    "node_modules/micromark/stream.js",
     "node_modules/hast-util-whitespace/readme.md",
     "node_modules/micromark-util-decode-string/readme.md",
     "node_modules/micromark-util-decode-numeric-character-reference/readme.md",
@@ -175,15 +184,6 @@
     "node_modules/micromark-util-encode/readme.md",
     "node_modules/micromark-util-subtokenize/readme.md",
     "node_modules/micromark-util-resolve-all/readme.md",
-    "node_modules/micromark-util-sanitize-uri/readme.md",
-    "node_modules/uvu/node_modules/kleur/readme.md",
-    "node_modules/uvu/readme.md",
-    "node_modules/decode-named-character-reference/node_modules/character-entities/readme.md",
-    "node_modules/decode-named-character-reference/readme.md",
-    "node_modules/mdast-util-from-markdown/node_modules/unist-util-stringify-position/readme.md",
-    "node_modules/mdast-util-from-markdown/node_modules/mdast-util-to-string/readme.md",
-    "node_modules/mdast-util-from-markdown/readme.md",
-    "node_modules/remark-rehype/node_modules/vfile-message/readme.md",
     "blog/2021-08-26-welcome/docusaurus-plushie-banner.jpeg"
   ]
 }

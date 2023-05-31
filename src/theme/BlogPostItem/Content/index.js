@@ -1,5 +1,5 @@
 import React from 'react';
-import Content from '@theme-original/DocItem/Content';
+import Content from '@theme-original/BlogPostItem/Content';
 import BidirectionalLinkWrapper from '@site/src/components/BidirectionalLinkWrapper/index';
 
 export default function ContentWrapper(props) {
@@ -7,5 +7,5 @@ export default function ContentWrapper(props) {
     <BidirectionalLinkWrapper>
       <Content {...props} />
     </BidirectionalLinkWrapper>
-  )
+  );
 }
