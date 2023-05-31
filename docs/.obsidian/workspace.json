@@ -1,0 +1,157 @@
+{
+  "main": {
+    "id": "154ebd55ec88ff3a",
+    "type": "split",
+    "children": [
+      {
+        "id": "12e07626fe66ebe3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "fae6de36df0d44ef",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "tutorial-extras/manage-docs-versions.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "0679777b692a97c9",
+    "type": "split",
+    "children": [
+      {
+        "id": "44a977aecfbb091a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0aafcd855e908b34",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "f76e3f5104c8c5c7",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "7198b857b0f93b5d",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "cffcfe49c4df9a82",
+    "type": "split",
+    "children": [
+      {
+        "id": "42b3684402fefc8e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "da5c6ae7d3c7f952",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "tutorial-extras/manage-docs-versions.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "69156c2a0411bc07",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "tutorial-extras/manage-docs-versions.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "1f80cd62f1d5aa59",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "debfffcc6927c1f8",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "tutorial-extras/manage-docs-versions.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "fae6de36df0d44ef",
+  "lastOpenFiles": [
+    "tutorial-basics/deploy-your-site.md",
+    "tutorial-basics/create-a-page.md",
+    "tutorial-basics/create-a-document.md",
+    "tutorial-basics/congratulations.md",
+    "intro.md"
+  ]
+}
