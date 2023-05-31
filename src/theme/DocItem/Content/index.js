@@ -23,7 +23,7 @@ export default function ContentWrapper(props) {
         </>
       )}
 
-      {pageLinks.map((p, i) => {
+      {pageLinks && pageLinks.map((p, i) => {
         const previewObj = excerpts[p];
         const basename = p.split(/[\\/]/).pop();
         if (!previewObj) return null;
