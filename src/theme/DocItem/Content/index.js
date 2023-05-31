@@ -23,12 +23,12 @@ export default function ContentWrapper(props) {
         </>
       )}
 
-      {pageLinks.map(p => {
+      {pageLinks.map((p, i) => {
         const previewObj = excerpts[p];
         const basename = p.split(/[\\/]/).pop();
         if (!previewObj) return null;
         return (
-          <Tooltip id={basename}>
+          <Tooltip id={basename} key={i}>
             <div>
               <h1>{previewObj.title}</h1>
               <ReactMarkdown>{previewObj.excerpt}</ReactMarkdown>
